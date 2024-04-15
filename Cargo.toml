@@ -1,0 +1,29 @@
+[package]
+name = "bbt_funding_rates"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+opt-level = 3
+lto = true
+[dependencies]
+tokio = {version ="1.8.1", features = ["macros","sync","time","rt-multi-thread"]}
+reqwest = {version = "0.11.4", features = ["json"]}
+serde_json = "1.0.64"
+derivative = "2.2.0"
+chrono = "0.4.19"
+csv ="1.1.6"
+serde = {version = "1.0.126", features = ["derive"]}
+strum = "0.21.0"
+strum_macros = "0.21.1"
+sha2 = "0.9.5"
+hmac = "0.11.0"
+hex = "0.4.3"
+base64 = "0.13.0"
+tokio-stream = "0.1.7"
+futures-util = "0.3.15"
+lettre = { version = "0.10.0-rc.3", features = ["tokio1","tokio1-rustls-tls"]}
+chrono-tz = "0.5.3"
+url = "2.2.2"
+tokio-tungstenite = {version = "0.14.0", features = ["native-tls"]}
